@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presensi Tamu PWA</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+    <nav>
+        <button onclick="showPage('scan')">Scan QR</button>
+        <button onclick="showPage('list-belum')">Belum Hadir</button>
+        <button onclick="showPage('list-sudah')">Hadir</button>
+    </nav>
+
+    <!-- Halaman Scan -->
+    <div id="page-scan" class="page">
+        <h2>Scan QR Tamu</h2>
+        <div id="reader" style="width: 100%"></div>
+        <p id="result-scan"></p>
+    </div>
+
+    <!-- Halaman List -->
+    <div id="page-list" class="page" style="display:none">
+        <h2 id="list-title">Daftar Tamu</h2>
+        <ul id="tamu-list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
